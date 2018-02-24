@@ -1,0 +1,28 @@
+.note__list {
+  color: $c-body-s;
+}
+
+.note__link {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    color: $c-body;
+  }
+}
+
+.note__number {
+  font-weight: 700;
+  text-align: right;
+}
+
+.note__name {
+  margin-left: 2em;
+}

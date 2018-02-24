@@ -1,0 +1,54 @@
+h1, h2, h3 {
+  line-height: 1em;
+  font-family: $f-head;
+  color: $c-head;
+}
+
+h2, h3 {
+  margin-top: 1em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol, ul {
+  list-style-position: inside;
+  margin-left: 1em;
+}
+
+blockquote {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: $c-body-s;
+    left: -1em;
+    top: 0;
+  }
+}
+
+pre {
+  background: $c-bkg;
+  padding: 1em 2em;
+}
+
+code {
+  font-family: $f-mono;
+  font-size: 0.9em;
+}

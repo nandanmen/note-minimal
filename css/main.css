@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700");
+/* --- Colors --- */
+/* --- Fonts --- */
+/* --- Mixins --- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto; }
+
+body {
+  font-family: "SF Pro Text", "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.618;
+  color: #3c3e3b;
+  z-index: 0; }
+
+h1, h2, h3 {
+  line-height: 1em;
+  font-family: "Montserrat", sans-serif;
+  color: #373836; }
+
+h2, h3 {
+  margin-top: 1em; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.2em; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+ol, ul {
+  list-style-position: inside;
+  margin-left: 1em; }
+
+blockquote {
+  position: relative; }
+  blockquote:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: #A6A4A0;
+    left: -1em;
+    top: 0; }
+
+pre {
+  background: #f2f2f2;
+  padding: 1em 2em; }
+
+code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.9em; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fafbfc; }
+
+.page {
+  background: #f2f2f2;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  box-shadow: 2px 12px 30px 4px rgba(0, 0, 0, 0.05), 3px 8px 5px rgba(0, 0, 0, 0.03), 2px 3px 4px -2px rgba(0, 0, 0, 0.08), 0px 75px 70px -50px rgba(10, 20, 50, 0.12), 0px -5px 5px 0px white;
+  position: relative; }
+  @media only screen and (min-width: 1024px) {
+    .page {
+      width: 80vw;
+      height: 80vh; } }
+
+.landing__title {
+  line-height: 1.2;
+  font-size: 4em;
+  align-self: center;
+  justify-self: center;
+  grid-column: 1;
+  grid-row: 1; }
+
+.footer {
+  color: #A6A4A0;
+  grid-row: 1;
+  grid-column: 1;
+  align-self: end;
+  justify-self: start;
+  font-size: 0.8em;
+  text-transform: lowercase;
+  margin-left: 3em;
+  margin-bottom: 3em; }
+
+.course__btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(90deg); }
+
+.n-container {
+  background: white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform; }
+
+.n-container--active {
+  transform: translateX(0); }
+  .n-container--active:after {
+    transform: translateX(-50%) rotateZ(45deg) rotateY(0); }
+
+.n-course {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative; }
+
+.n-course__title {
+  position: absolute;
+  color: #A6A4A0;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  transform-origin: left;
+  transform: rotate(90deg);
+  top: 5px;
+  right: -140%; }
+
+.course__list {
+  list-style-type: none;
+  font-size: 1.5em; }
+
+.course {
+  font-size: 1.2em;
+  color: #A6A4A0;
+  padding: 4px 8px;
+  position: relative; }
+  .course:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transform: scaleY(0);
+    transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transform-origin: bottom; }
+  .course:hover:after {
+    transform: scaleY(1); }
+
+.course__btn {
+  background: #3c3e3b;
+  color: white;
+  padding: 9px 18px;
+  font-size: 1.5em; }
+
+.course__header {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  justify-self: center; }
+
+.note__list--container {
+  overflow-y: scroll; }
+
+.note__list {
+  list-style-type: none;
+  max-width: 50%; }
+
+.note__link {
+  margin-bottom: 0.5em; }
+
+.note__list {
+  color: #A6A4A0; }
+
+.note__link {
+  display: flex;
+  justify-content: flex-start;
+  position: relative; }
+  .note__link span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .note__link:hover {
+    color: #3c3e3b; }
+
+.note__number {
+  font-weight: 700;
+  text-align: right; }
+
+.note__name {
+  margin-left: 2em; }
+
+.course__header {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+
+.course__name {
+  font-size: 12em;
+  transform: translateX(20px); }
+
+.course__dept {
+  letter-spacing: 1.5em;
+  transform: translateX(1.5em); }
+
+.course__desc {
+  width: 70%;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  line-height: 1.4; }
+
+.n-note {
+  position: fixed;
+  left: calc(20vw - 4em);
+  z-index: 10;
+  overflow-y: scroll; }
+
+.note-container {
+  position: absolute;
+  top: 0;
+  background: white;
+  width: 60vw;
+  height: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: flex;
+  z-index: 0;
+  overflow-y: scroll; }
+
+.note {
+  height: 100%;
+  width: 100%; }
+
+.note__section {
+  position: fixed;
+  top: 17.5vh;
+  left: calc(20vw + 3em);
+  z-index: 30; }
+
+.note {
+  display: grid;
+  grid-template-columns: 1fr 1em 600px 1em 1fr;
+  grid-auto-rows: max-content; }
+  .note > * {
+    grid-column: 3;
+    margin-bottom: 1.2em; }
+    .note > *:first-child {
+      margin-top: 12.5vh; }
+    .note > *:last-child {
+      margin-bottom: 12.5vh; }
+  .note pre {
+    grid-column: 2 / 4;
+    border-radius: 4px; }
+
+.n-note {
+  list-style: none;
+  width: 4em;
+  height: 65vh;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0; }
+
+.note-link {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  color: #A6A4A0;
+  width: 100%;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+  position: relative; }
+  .note-link:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #A6A4A0;
+    transform: scaleY(0);
+    transition: all 0.25s cubic-bezier(0.22, 0.61, 0.36, 1); }
+  .note-link:hover:after {
+    transform: scaleY(1); }
+
+.note-link--active:after {
+  transform: scaleY(1); }
+
+.note__section {
+  color: #A6A4A0;
+  font-size: 0.8em;
+  transform-origin: top;
+  transform: rotate(90deg); }
+
+/*# sourceMappingURL=main.css.map */

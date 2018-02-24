@@ -1,0 +1,19 @@
+.course__header {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
+}
+
+.note__list--container {
+  overflow-y: scroll;
+}
+
+.note__list {
+  list-style-type: none;
+  max-width: 50%;
+}
+
+.note__link {
+  margin-bottom: 0.5em;
+}

@@ -1,0 +1,23 @@
+.course__header {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.course__name {
+  font-size: 12em;
+  transform: translateX(20px);
+}
+
+.course__dept {
+  letter-spacing: 1.5em;
+  transform: translateX(1.5em);
+}
+
+.course__desc {
+  width: 70%;
+  font-family: $f-serif;
+  font-style: italic;
+  line-height: 1.4;
+}
