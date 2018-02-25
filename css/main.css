@@ -54,7 +54,7 @@ blockquote {
   blockquote:before {
     content: '';
     position: absolute;
-    width: 4px;
+    width: 3px;
     height: 100%;
     background: #A6A4A0;
     left: -1em;

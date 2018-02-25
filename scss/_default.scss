@@ -35,7 +35,7 @@ blockquote {
   &:before {
     content: '';
     position: absolute;
-    width: 4px;
+    width: 3px;
     height: 100%;
     background: $c-body-s;
     left: -1em;
