@@ -47,7 +47,7 @@ function changePage() {
 
 function updateButtons() {
   const url = window.location.href;
-  const compareTo = url.substr(start, 2);
+  const compareTo = url.substr(url.length - 3, 2);
   const buttons = document.querySelectorAll(".note-link");
   buttons.forEach(btn => {
     if (btn.classList.contains("note-link--active")) {
