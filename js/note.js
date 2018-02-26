@@ -31,10 +31,15 @@ function changePage() {
     wrapper.innerHTML = responseText;
 
     const oldContent = document.querySelector(".note");
+    const oldTitle = document.querySelector(".note__section");
     const newContent = wrapper.querySelector(".note");
+    const newTitle = wrapper.querySelector(".note__section");
 
     main.appendChild(newContent);
     oldContent.parentNode.removeChild(oldContent);
+    const parent = oldTitle.parentNode;
+    parent.removeChild(oldTitle);
+    parent.appendChild(newTitle);
     updateButtons();
 
   });
