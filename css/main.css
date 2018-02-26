@@ -301,6 +301,7 @@ body {
   overflow-y: scroll; }
 
 .note-container {
+  display: block;
   position: absolute;
   top: 0;
   background: white;
