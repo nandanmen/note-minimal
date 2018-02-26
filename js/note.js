@@ -35,5 +35,7 @@ function changePage() {
 
     main.appendChild(newContent);
     oldContent.parentNode.removeChild(oldContent);
-  })
+    updateButtons();
+    
+  });
 }
