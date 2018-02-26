@@ -14,7 +14,6 @@
   height: auto;
   margin-top: 5vh;
   margin-bottom: 5vh;
-  display: flex;
   z-index: 0;
   overflow-y: scroll;
 }
@@ -29,27 +28,4 @@
   top: 17.5vh;
   left: calc(20vw + 3em);
   z-index: 30;
-}
-
-.note--disable {
-  animation: fade-out-bottom 0.5s $cubic-out forwards;
-}
-
-.note--active {
-  
-}
-
-@keyframes fade-out-bottom {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-}
-
-@keyframes fade-in {
-  
 }
