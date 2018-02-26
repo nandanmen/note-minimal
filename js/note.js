@@ -41,7 +41,7 @@ function changePage() {
     parent.removeChild(oldTitle);
     parent.appendChild(newTitle);
     updateButtons();
-
+    animate(main);
   });
 }
 
@@ -56,5 +56,12 @@ function updateButtons() {
     if (btn.textContent == compareTo) {
       btn.classList.add("note-link--active");
     }
-  })
+  });
+}
+
+function animate(node) {
+  node.classList.add("change-page");
+  setTimeout(() => {
+    node.classList.remove("change-page");
+  }, 1500);
 }
