@@ -67,6 +67,7 @@ function animate(oldNode, newNode) {
   });
   newNode.addEventListener("animationend", () => {
     newNode.classList.remove("fade-in");
+    newNode.classList.remove("note--inactive");
   })
   oldNode.classList.add("fade-out");
 }
