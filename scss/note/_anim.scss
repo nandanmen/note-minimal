@@ -1,0 +1,34 @@
+.note--inactive {
+  opacity: 0;
+  transform: translateY(-16px);
+}
+
+.fade-out {
+  animation: fade-out-bottom 0.5s $cubic-out forwards;
+}
+
+.fade-in {
+  animation: fade-in 0.5s $cubic-out forwards;
+}
+
+@keyframes fade-out-bottom {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

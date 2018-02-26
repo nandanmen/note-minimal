@@ -1,4 +1,4 @@
-(function build() {
+(function buildLinks() {
   let classCount = 0;
   const linkTemplate = document.getElementById("course-link-template");
   const container = document.querySelector(".course__list");
@@ -14,16 +14,11 @@
       const a = linkTemplate.content.querySelector(".course a");
       a.textContent = number;
       a.href = `notes/${currDept.dept}/${number}`;
-      setAnimation(a, classCount);
 
       const result = document.importNode(linkTemplate.content, true);
       container.appendChild(result);
     }
   }
 }());
-
-function setAnimation(node, delay) {
-  node.style["animation-delay"] = `${1.5 + delay/10}s`;
-}
 
 

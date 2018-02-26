@@ -33,15 +33,15 @@ function changePage() {
     const oldContent = document.querySelector(".note");
     const oldTitle = document.querySelector(".note__section");
     const newContent = wrapper.querySelector(".note");
+    newContent.classList.add("note--inactive");
     const newTitle = wrapper.querySelector(".note__section");
 
     main.appendChild(newContent);
-    oldContent.parentNode.removeChild(oldContent);
     const parent = oldTitle.parentNode;
     parent.removeChild(oldTitle);
     parent.appendChild(newTitle);
     updateButtons();
-    animate(main);
+    animate(oldContent, newContent);
   });
 }
 
@@ -59,9 +59,14 @@ function updateButtons() {
   });
 }
 
-function animate(node) {
-  node.classList.add("change-page");
-  setTimeout(() => {
-    node.classList.remove("change-page");
-  }, 1500);
+function animate(oldNode, newNode) {
+  oldNode.addEventListener("animationend", () => {
+    oldNode.classList.remove("fade-out");
+    newNode.classList.add("fade-in");
+    oldNode.parentNode.removeChild(oldNode);
+  });
+  newNode.addEventListener("animationend", () => {
+    newNode.classList.remove("fade-in");
+  })
+  oldNode.classList.add("fade-out");
 }

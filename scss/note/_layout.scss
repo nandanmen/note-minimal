@@ -19,21 +19,6 @@
   overflow-y: scroll;
 }
 
-.change-page {
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: $c-body-s;
-    transform-origin: left;
-    transform: scaleX(0);
-    animation: slide-right 0.8s $cubic-in-out 0s;
-  }
-}
-
 .note {
   height: 100%;
   width: 100%;
@@ -46,23 +31,25 @@
   z-index: 30;
 }
 
-@keyframes slide-right {
-  0% {
-    transform: scaleX(0);
+.note--disable {
+  animation: fade-out-bottom 0.5s $cubic-out forwards;
+}
+
+.note--active {
+  
+}
+
+@keyframes fade-out-bottom {
+  from {
+    opacity: 1;
+    transform: translateY(0);
   }
-  50% {
-    transform: scaleX(1);
-    transform-origin: left;
+  to {
+    opacity: 0;
+    transform: translateY(16px);
   }
-  51% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-  60% {
-    transform: scaleX(1);
-  }
-  100% {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
+}
+
+@keyframes fade-in {
+  
 }
