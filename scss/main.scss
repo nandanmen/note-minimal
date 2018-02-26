@@ -1,6 +1,7 @@
 @import "settings";
 @import "reset";
 @import "default";
+@import "anim";
 
 @import "landing/layout";
 @import "landing/components/course";
@@ -11,3 +12,4 @@
 
 @import "note/layout";
 @import "note/note";
+@import "note/pseudo";

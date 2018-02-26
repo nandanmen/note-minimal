@@ -8,12 +8,16 @@
   <link href="../../../../css/main.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+  <div class='ps-note'></div>
   <ul class="n-note">
-    <li class="note-link">01</li>
-    <li class="note-link note-link--active">02</li>
-    <li class="note-link">03</li>
-    <li class="note-link">04</li>
-    <li class="note-link">05</li>
+    <template id="note-link-template">
+      <li class="note-link"></li>
+    </template>
+    <li class="note-link">01<a href="../01/index.html"><span></span></a></li>
+    <li class="note-link note-link--active">02<a href="#"><span></span></a></li>
+    <li class="note-link">03<a href="#"><span></span></a></li>
+    <li class="note-link">04<a href="#"><span></span></a></li>
+    <li class="note-link">05<a href="#"><span></span></a></li>
   </ul>
   <p class='note__section'>COMM 291.2</p>
   <main class='page note-container'>
@@ -22,7 +26,10 @@
       <p>The correlation between two variables measures the relationship between these two variabes. Correlation only measures <em>linear</em> relationships.</p>
       <p>The measure of linear association is called the <strong>correlation coefficient</strong> and is denoted by r.</p>
       <p>Properties of the correlation coefficient:</p>
-      <ul><li>r is between 1 and -1</li><li>the sign indicates positive or negative slope</li></ul>
+      <ul>
+        <li>r is between 1 and -1</li>
+        <li>the sign indicates positive or negative slope</li>
+      </ul>
       <h2>Linear Regression</h2>
       <p>To find the best fitting straight line through a scatterplot, we need to find a line such that it minimizes the distance from the data points to the regression line.</p>
       <p>A <em>residual</em> can be defined as:</p>
@@ -32,6 +39,12 @@
         <li>e<sub>i</sub> &mdash; the residual</li>
         <li>y &mdash; observed y</li>
         <li>y<sub>i</sub> &mdash; predicted y</li>
+      </ul>
+      <p>The equation of the regression line is defined as:</p>
+      <pre><code>y = b0 + b1x</code></pre>
+      <p>Where:</p>
+      <ul>
+        <li></li>
       </ul>
     </article>
   </main>
