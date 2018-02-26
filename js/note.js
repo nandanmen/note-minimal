@@ -25,7 +25,7 @@ function loadPage(url) {
 const main = document.querySelector("main");
 
 function changePage() {
-  const url = window.location.href;
+  const url = window.location.href + "index.html";
   loadPage(url).then(function(responseText) {
     const wrapper = document.createElement("div");
     wrapper.innerHTML = responseText;
@@ -36,6 +36,6 @@ function changePage() {
     main.appendChild(newContent);
     oldContent.parentNode.removeChild(oldContent);
     updateButtons();
-    
+
   });
 }
