@@ -1,0 +1,76 @@
+@keyframes expand-horiz {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes expand-vert {
+  0% {
+    transform: scaleY(0) translate(-50%, -50%) rotate(90deg);
+  }
+  100% {
+    transform: scaleY(1) translate(-50%, -50%) rotate(90deg);
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.landing {
+  transform: scaleX(0);
+  > * {
+    opacity: 0;
+  }
+  animation: expand-horiz 0.8s $cubic-in-out 0.3s forwards;
+}
+
+.n-container {
+  transform-origin: right;
+  opacity: 1;
+  transform: scaleX(0); 
+  animation: expand-horiz 0.5s $cubic-out 1s forwards;
+}
+
+.course__btn {
+  opacity: 1;
+  transform: scaleY(0) translate(-50%, -50%) rotate(90deg);
+  animation: expand-vert 0.3s $cubic-out 1.5s forwards;
+}
+
+.landing__title, .footer {
+  opacity: 0;
+  transform: translateX(-16px);
+  animation: fade-in-left 0.5s ease-out 1.7s forwards;
+}
+
+.footer {
+  animation-delay: 1.9s;
+}
+
+.course {
+  opacity: 0;
+  transform: translateX(16px);
+  animation: fade-in-right 0.3s $cubic-out 1.7s forwards;
+}

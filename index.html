@@ -8,17 +8,14 @@
   <link href="css/main.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-  <main class='page'>
+  <main class='page landing'>
     <h1 class='landing__title'>Pick a class.</h1>
     <nav class='n-container'>
       <nav class="n-course">
         <ul class="course__list">
-          <li class="course"><a href="#">110</a></li>
-          <li class="course"><a href="#">121</a></li>
-          <li class="course"><a href="#">210</a></li>
-          <li class="course"><a href="#">213</a></li>
-          <li class="course"><a href="#">221</a></li>
-          <li class="course"><a href="#">310</a></li>
+          <template id="course-link-template">
+            <li class="course"><a href=""></a></li>
+          </template>
         </ul>
       </nav>
     </nav>
@@ -29,6 +26,7 @@
       <p>by narendra syahrasyad.</p>
     </footer>
   </main>
+  <script src="js/courses.js" type="text/javascript"></script>
   <script src="js/landing.js" type="text/javascript"></script>
 </body>
 </html>
