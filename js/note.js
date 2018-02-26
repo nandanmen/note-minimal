@@ -39,3 +39,17 @@ function changePage() {
 
   });
 }
+
+function updateButtons() {
+  const url = window.location.href;
+  const compareTo = url.substr(start, 2);
+  const buttons = document.querySelectorAll(".note-link");
+  buttons.forEach(btn => {
+    if (btn.classList.contains("note-link--active")) {
+      btn.classList.remove("note-link--active");
+    }
+    if (btn.textContent == compareTo) {
+      btn.classList.add("note-link--active");
+    }
+  })
+}
