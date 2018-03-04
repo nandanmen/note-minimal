@@ -1,0 +1,25 @@
+.block {
+  font-family: $f-mono;
+  width: 2.5em;
+  height: 2.5em;
+  background: $c-bkg;
+  color: $c-body-s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.2em;
+  border-radius: 4px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.highlight-1 {
+  color: white;
+  background: #A8DADC;
+}
+
+.highlight-2 {
+  color: white;
+  background: #457B9D;
+}

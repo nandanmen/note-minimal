@@ -23,10 +23,8 @@
   width: 4em;
   height: 65vh;
   background: $c-bkg;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin-left: 0;
+  overflow-y: scroll;
 }
 
 .note-link {
@@ -75,4 +73,14 @@
   font-size: 0.8em;
   transform-origin: top;
   transform: rotate(90deg);
+}
+
+.identifier {
+  font-family: $f-head;
+  color: white;
+  padding: 0.5em 1em;
+}
+
+.identifier--science {
+  background: #457b9d;
 }

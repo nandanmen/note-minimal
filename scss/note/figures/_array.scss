@@ -1,0 +1,9 @@
+.array {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2em;
+  &:last-child {
+    margin-right: 0;
+  }
+}

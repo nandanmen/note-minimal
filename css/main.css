@@ -10,6 +10,9 @@
   padding: 0;
   margin: 0; }
 
+::-webkit-scrollbar {
+  display: none; }
+
 html {
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
@@ -64,9 +67,23 @@ pre {
   background: #f2f2f2;
   padding: 1em 2em; }
 
+pre code {
+  padding: 0;
+  border-radius: 0;
+  background: none; }
+
 code {
+  background: #f2f2f2;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
   font-family: "Source Code Pro", monospace;
   font-size: 0.9em; }
+
+figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; }
 
 @keyframes sl {
   from {
@@ -297,8 +314,7 @@ body {
 .n-note {
   position: fixed;
   left: calc(20vw - 4em);
-  z-index: 10;
-  overflow-y: scroll; }
+  z-index: 10; }
 
 .note-container {
   display: block;
@@ -322,6 +338,13 @@ body {
   top: 17.5vh;
   left: calc(20vw + 3em);
   z-index: 30; }
+
+.identifier {
+  position: fixed;
+  right: calc(20vw - 1em);
+  top: 10vh;
+  z-index: 30;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2); }
 
 .note--inactive {
   transform: translateY(-16px); }
@@ -366,10 +389,8 @@ body {
   width: 4em;
   height: 65vh;
   background: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 0; }
+  margin-left: 0;
+  overflow-y: scroll; }
 
 .note-link {
   font-family: "Montserrat", sans-serif;
@@ -408,5 +429,43 @@ body {
   font-size: 0.8em;
   transform-origin: top;
   transform: rotate(90deg); }
+
+.identifier {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  padding: 0.5em 1em; }
+
+.identifier--science {
+  background: #457b9d; }
+
+.block {
+  font-family: "Source Code Pro", monospace;
+  width: 2.5em;
+  height: 2.5em;
+  background: #f2f2f2;
+  color: #A6A4A0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.2em;
+  border-radius: 4px; }
+  .block:last-child {
+    margin-right: 0; }
+
+.highlight-1 {
+  color: white;
+  background: #A8DADC; }
+
+.highlight-2 {
+  color: white;
+  background: #457B9D; }
+
+.array {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2em; }
+  .array:last-child {
+    margin-right: 0; }
 
 /*# sourceMappingURL=main.css.map */
