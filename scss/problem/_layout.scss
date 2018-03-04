@@ -1,0 +1,47 @@
+.problems {
+  overflow: hidden;
+}
+
+.problem__chapter {
+  position: absolute;
+  top: -2em;
+}
+
+.problem {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5em;
+  h1 {
+    position: relative;
+    width: 60%;
+  }
+}
+
+.solution {
+  background: white;
+  transform: translateX(92%);
+  grid-column: 1 / 3;
+  grid-row: 1;
+  z-index: 20;
+}
+
+.buttons {
+  position: absolute;
+  left: calc(10vw - 48px);
+  //top: calc(10vh + 56px);
+  z-index: 20;
+  display: grid;
+}
+
+.btn--next {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.btn--prev {
+  grid-column: 1;
+  grid-row: 1;
+}

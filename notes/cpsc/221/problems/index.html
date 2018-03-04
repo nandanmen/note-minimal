@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CPSC221 Problems</title>
+  <link href="../../../../css/main.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <div class='buttons'>
+    <button class='btn btn--next'>&gt;</button>
+    <button class='btn btn--prev'>&lt;</button>
+  </div>
+  <main class='page problems'>
+    <section class='problem'>
+      <h1>
+        Prove by induction that a <strong>full, complete</strong> binary tree of height <code>h</code> has exactly <code>2<sup>h+1</sup>-1</code> nodes.
+        <div class='problem__chapter'>
+          <p>Trees & Binary Trees</p>
+        </div>
+      </h1>
+    </section>
+    <section class='solution'>
+      <article class="solution__content">
+        <h1>We begin with the base case.</h1>
+        <p>The base case is a tree with a height of 0. We know that this tree has only one node. Inputting 0 to the formula:</p>
+        <pre><code>2<sup>0 + 1</sup> - 1 = 1</code></pre>
+        <p>Thus the formula is true for <code>h = 0</code>.</p>
+        <h2>Inductive Hypothesis</h2>
+        <p>Let it be true for <code>h = k</code>, where <code>0 &lt; k &lt; h</code>. That is, we assume that a binary tree of height <code>k</code> will have nodes equal to:</p>
+        <pre><code>2<sup>k + 1</sup> - 1</code></pre>
+        <h2>Inductive Step</h2>
+        <p></p>
+      </article>
+    </section>
+  </main>
+  <script src="../../../../js/problem.js" type="text/javascript"></script>
+</body>
+</html>

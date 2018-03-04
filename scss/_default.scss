@@ -68,3 +68,12 @@ figure {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+button {
+  cursor: pointer;
+  color: inherit;
+  border: none;
+  &:focus {
+    outline: 0;
+  }
+}

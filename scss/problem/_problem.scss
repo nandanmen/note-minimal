@@ -1,0 +1,79 @@
+.problem__chapter {
+  color: $c-body-s;
+  font-size: 0.4em;
+  font-family: $f-serif;
+  font-style: italic;
+}
+
+.problem {
+  font-size: 1.2em;
+  h1 {
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  code {
+    padding: 0;
+    background: none;
+  }
+}
+
+.btn {
+  //background: $c-body-s;
+  background: none;
+  color: $c-body-s;
+  width: 48px;
+  height: 48px;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: $f-mono;
+  &:hover {
+    background: $c-body-s;
+    color: white;
+  }
+}
+
+.solution {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s $cubic-out;
+  &:after {
+    content: 'Show Solution';
+    color: $c-body-s;
+    font-size: 0.9em;
+    font-weight: 300;
+    position: absolute;
+    top: 50%;
+    left: -1em;
+    transform: translateY(-50%) rotate(90deg);
+    transition: all 0.5s $cubic-out;
+    opacity: 1;
+  }
+}
+
+.solution--onhover {
+  transform: translateX(80%);
+  &:after {
+    opacity: 0;
+  }
+}
+
+.solution--active {
+  transform: translateX(0);
+  overflow: scroll;
+  &:after {
+    opacity: 0;
+  }
+}
+
+.solution__content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 560px 1fr;
+  > * {
+    grid-column: 2;
+    margin-bottom: 1em;
+    &:first-child {
+      margin-top: 10vh;
+    }
+  }
+}
